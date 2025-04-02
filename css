@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('https://i.ibb.co/B28Gr61y/food.png') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+}
+
+/* Container */
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.navbar {
+    background: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.navbar a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #009688;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+/* Logo */
+.logo {
+    display: block;
+    margin: 20px auto;
+    width: 100px;
+}
+
+/* Heading */
+h1 {
+    font-size: 24px;
+    color: orange;
+}
+
+/* Mess Timings Section */
+.mess-timings {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: left;
+}
+
+.mess-timings h2 {
+    color: #009688;
+    text-align: center;
+}
+
+.mess-timings ul {
+    list-style: none;
+    padding: 0;
+}
+
+.mess-timings li {
+    font-size: 18px;
+    padding: 5px 0;
+    color: #444;
+}
+
+/* Mess Rules & Regulations */
+.mess-rules {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: left;
+}
+
+.mess-rules h2 {
+    color: #ff6600;
+    text-align: center;
+}
+
+.mess-rules ul {
+    list-style: none;
+    padding: 0;
+}
+
+.mess-rules li {
+    font-size: 18px;
+    padding: 5px 0;
+    color: #555;
+}
+
+/* Form Section */
+form {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    margin: auto;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: orange;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #ff8800;
+}
+
+/* Footer Section */
+footer {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    font-size: 18px;
+    text-align: center;
+}
+
+footer p {
+    color: orange;
+}
+
+footer a {
+    color: orange;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Copyright */
+.copyright {
+    background: rgba(0, 0, 0, 0.8);
+    color: orange;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+#contact {
+    text-align: center; /* Center text */
+    margin: 30px auto; /* Center the whole section */
+    padding: 20px;
+    background: rgba(255, 102, 0, 0.1); /* Light orange background */
+    border-radius: 10px;
+    max-width: 600px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+.mess-section {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 20px auto;
+}
+.mess-section h2 {
+    color: orange;
+}

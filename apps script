@@ -1,0 +1,37 @@
+const sheetName = 'Sheet1'; // Change this if your sheet has a different name
+const folderId = "1tuYvo5dnZIYM-hT9s1yQ9JXfPVoLwNQ1"; // Replace with your Google Drive Folder ID
+
+function doPost(e) {
+  try {
+    const doc = SpreadsheetApp.openById("1ZB1go2cztOvYfMpV4qHQymKdBfVGkeTH1vpajNdmZAE");
+    const sheet = doc.getSheetByName(sheetName);
+    
+    const registerNumber = e.parameter.register_number ;
+    const studentName = e.parameter.student_name ;
+    const roomNumber = e.parameter.room_number ;
+    const messName = e.parameter.mess_name ;
+    const messType = e.parameter.mess_type ;
+    const category = e.parameter.category ;
+    const suggestions = e.parameter.suggestions ;
+    const timestamp = new Date();
+    
+    let fileUrl = "";
+    
+    if (e.parameters.file) {
+      const blob = Utilities.newBlob(Utilities.base64Decode(e.parameters.file), e.parameters.filetype, e.parameters.filename);
+      const folder = DriveApp.getFolderById(folderId);
+      const file = folder.createFile(blob);
+      fileUrl = file.getUrl();
+    }
+
+    sheet.appendRow([timestamp, registerNumber, studentName, roomNumber, messName, messType, category, suggestions, fileUrl]);
+
+    return ContentService.createTextOutput(
+      JSON.stringify({ status: "success", message: "Data stored successfully!" })
+    ).setMimeType(ContentService.MimeType.JSON);
+  } catch (error) {
+    return ContentService.createTextOutput(
+      JSON.stringify({ status: "error", message: error.toString() })
+    ).setMimeType(ContentService.MimeType.JSON);
+  }
+}
